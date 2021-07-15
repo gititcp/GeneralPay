@@ -15,13 +15,19 @@ allprojects {
 二、Module下的build.gradle文件下添加
 
 dependencies {
-          compile 'com.github.Lvluffy:GeneralPay:1.0.0'
+          compile 'com.github.Lvluffy:GeneralPay:1.0.2'
 }
 
 或者
 
 dependencies {
-          implementation 'com.github.Lvluffy:GeneralPay:1.0.0'
+          implementation 'com.github.Lvluffy:GeneralPay:1.0.2'
+}
+
+其中包含微信支付三方包：com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.5
+可使用剔除：
+api ('com.github.gititcp:GeneralPay:1.0.2'){
+   exclude group: 'com.tencent.mm.opensdk', module: 'com.tencent.mm.opensdk';
 }
 
 ## 录屏
